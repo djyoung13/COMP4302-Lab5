@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ConversionServiceService WSDL service -->
+
+  <service name="ConversionService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://endpoints"/>
+      <parameter name="wsdlServiceElement" value="ConversionServiceService"/>
+      <parameter name="schemaQualified" value="http://endpoints"/>
+      <parameter name="wsdlServicePort" value="ConversionService"/>
+      <parameter name="className" value="endpoints.ConversionService"/>
+      <parameter name="wsdlPortType" value="ConversionService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="kilometersToMiles" qname="operNS:kilometersToMiles" returnQName="retNS:kilometersToMilesReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="milesToKilometers" qname="operNS:milesToKilometers" returnQName="retNS:milesToKilometersReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="kilometersToMilesD" qname="operNS:kilometersToMilesD" returnQName="retNS:kilometersToMilesDReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="milesToKilometersD" qname="operNS:milesToKilometersD" returnQName="retNS:milesToKilometersDReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="weeksToYearsD" qname="operNS:weeksToYearsD" returnQName="retNS:weeksToYearsDReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="monthsToDaysD" qname="operNS:monthsToDaysD" returnQName="retNS:monthsToDaysDReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="yearsToWeeksD" qname="operNS:yearsToWeeksD" returnQName="retNS:yearsToWeeksDReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="feetToMilesD" qname="operNS:feetToMilesD" returnQName="retNS:feetToMilesDReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="milesToFeetD" qname="operNS:milesToFeetD" returnQName="retNS:milesToFeetDReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="daysToMonthsD" qname="operNS:daysToMonthsD" returnQName="retNS:daysToMonthsDReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="feetToInchesD" qname="operNS:feetToInchesD" returnQName="retNS:feetToInchesDReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="inchesToFeetD" qname="operNS:inchesToFeetD" returnQName="retNS:inchesToFeetDReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="inchesToCentiD" qname="operNS:inchesToCentiD" returnQName="retNS:inchesToCentiDReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="centiToInchesD" qname="operNS:centiToInchesD" returnQName="retNS:centiToInchesDReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="inchesToFeet" qname="operNS:inchesToFeet" returnQName="retNS:inchesToFeetReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="feetToInches" qname="operNS:feetToInches" returnQName="retNS:feetToInchesReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="inchesToCenti" qname="operNS:inchesToCenti" returnQName="retNS:inchesToCentiReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="centiToInches" qname="operNS:centiToInches" returnQName="retNS:centiToInchesReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="feetToMiles" qname="operNS:feetToMiles" returnQName="retNS:feetToMilesReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="milesToFeet" qname="operNS:milesToFeet" returnQName="retNS:milesToFeetReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="daysToMonths" qname="operNS:daysToMonths" returnQName="retNS:daysToMonthsReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="monthsToDays" qname="operNS:monthsToDays" returnQName="retNS:monthsToDaysReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="weeksToYears" qname="operNS:weeksToYears" returnQName="retNS:weeksToYearsReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://endpoints" xmlns:retNS="http://endpoints" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="yearsToWeeks" qname="operNS:yearsToWeeks" returnQName="retNS:yearsToWeeksReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://endpoints" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:int"/>
+      </operation>
+      <parameter name="allowedMethods" value="feetToInchesD feetToInches inchesToFeetD daysToMonthsD weeksToYears daysToMonths inchesToFeet monthsToDaysD milesToFeetD centiToInches feetToMiles milesToFeet milesToKilometers centiToInchesD weeksToYearsD inchesToCentiD kilometersToMiles kilometersToMilesD yearsToWeeks feetToMilesD inchesToCenti monthsToDays milesToKilometersD yearsToWeeksD"/>
+
+  </service>
+</deployment>

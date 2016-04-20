@@ -1,0 +1,1470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://endpoints" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://endpoints" xmlns:intf="http://endpoints" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://endpoints" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="kilometersToMiles">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="kilometersToMilesResponse">
+    <complexType>
+     <sequence>
+      <element name="kilometersToMilesReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="milesToKilometers">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="milesToKilometersResponse">
+    <complexType>
+     <sequence>
+      <element name="milesToKilometersReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="kilometersToMilesD">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="kilometersToMilesDResponse">
+    <complexType>
+     <sequence>
+      <element name="kilometersToMilesDReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="milesToKilometersD">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="milesToKilometersDResponse">
+    <complexType>
+     <sequence>
+      <element name="milesToKilometersDReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="weeksToYearsD">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="weeksToYearsDResponse">
+    <complexType>
+     <sequence>
+      <element name="weeksToYearsDReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="monthsToDaysD">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="monthsToDaysDResponse">
+    <complexType>
+     <sequence>
+      <element name="monthsToDaysDReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="yearsToWeeksD">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="yearsToWeeksDResponse">
+    <complexType>
+     <sequence>
+      <element name="yearsToWeeksDReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="feetToMilesD">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="feetToMilesDResponse">
+    <complexType>
+     <sequence>
+      <element name="feetToMilesDReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="milesToFeetD">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="milesToFeetDResponse">
+    <complexType>
+     <sequence>
+      <element name="milesToFeetDReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="daysToMonthsD">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="daysToMonthsDResponse">
+    <complexType>
+     <sequence>
+      <element name="daysToMonthsDReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="feetToInchesD">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="feetToInchesDResponse">
+    <complexType>
+     <sequence>
+      <element name="feetToInchesDReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="inchesToFeetD">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="inchesToFeetDResponse">
+    <complexType>
+     <sequence>
+      <element name="inchesToFeetDReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="inchesToCentiD">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="inchesToCentiDResponse">
+    <complexType>
+     <sequence>
+      <element name="inchesToCentiDReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="centiToInchesD">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="centiToInchesDResponse">
+    <complexType>
+     <sequence>
+      <element name="centiToInchesDReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="inchesToFeet">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="inchesToFeetResponse">
+    <complexType>
+     <sequence>
+      <element name="inchesToFeetReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="feetToInches">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="feetToInchesResponse">
+    <complexType>
+     <sequence>
+      <element name="feetToInchesReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="inchesToCenti">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="inchesToCentiResponse">
+    <complexType>
+     <sequence>
+      <element name="inchesToCentiReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="centiToInches">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="centiToInchesResponse">
+    <complexType>
+     <sequence>
+      <element name="centiToInchesReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="feetToMiles">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="feetToMilesResponse">
+    <complexType>
+     <sequence>
+      <element name="feetToMilesReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="milesToFeet">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="milesToFeetResponse">
+    <complexType>
+     <sequence>
+      <element name="milesToFeetReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="daysToMonths">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="daysToMonthsResponse">
+    <complexType>
+     <sequence>
+      <element name="daysToMonthsReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="monthsToDays">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="monthsToDaysResponse">
+    <complexType>
+     <sequence>
+      <element name="monthsToDaysReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="weeksToYears">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="weeksToYearsResponse">
+    <complexType>
+     <sequence>
+      <element name="weeksToYearsReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="yearsToWeeks">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="yearsToWeeksResponse">
+    <complexType>
+     <sequence>
+      <element name="yearsToWeeksReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="daysToMonthsDResponse">
+
+      <wsdl:part element="impl:daysToMonthsDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="centiToInchesResponse">
+
+      <wsdl:part element="impl:centiToInchesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="inchesToCentiDResponse">
+
+      <wsdl:part element="impl:inchesToCentiDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="centiToInchesDResponse">
+
+      <wsdl:part element="impl:centiToInchesDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="weeksToYearsResponse">
+
+      <wsdl:part element="impl:weeksToYearsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="feetToInchesDRequest">
+
+      <wsdl:part element="impl:feetToInchesD" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="inchesToCentiResponse">
+
+      <wsdl:part element="impl:inchesToCentiResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="feetToInchesRequest">
+
+      <wsdl:part element="impl:feetToInches" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="milesToFeetRequest">
+
+      <wsdl:part element="impl:milesToFeet" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="inchesToFeetDResponse">
+
+      <wsdl:part element="impl:inchesToFeetDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="feetToInchesResponse">
+
+      <wsdl:part element="impl:feetToInchesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="milesToFeetDResponse">
+
+      <wsdl:part element="impl:milesToFeetDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="kilometersToMilesRequest">
+
+      <wsdl:part element="impl:kilometersToMiles" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="centiToInchesDRequest">
+
+      <wsdl:part element="impl:centiToInchesD" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="weeksToYearsDResponse">
+
+      <wsdl:part element="impl:weeksToYearsDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="kilometersToMilesResponse">
+
+      <wsdl:part element="impl:kilometersToMilesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="milesToKilometersDResponse">
+
+      <wsdl:part element="impl:milesToKilometersDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="inchesToCentiDRequest">
+
+      <wsdl:part element="impl:inchesToCentiD" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="centiToInchesRequest">
+
+      <wsdl:part element="impl:centiToInches" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="yearsToWeeksDResponse">
+
+      <wsdl:part element="impl:yearsToWeeksDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="inchesToFeetRequest">
+
+      <wsdl:part element="impl:inchesToFeet" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="feetToInchesDResponse">
+
+      <wsdl:part element="impl:feetToInchesDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="inchesToCentiRequest">
+
+      <wsdl:part element="impl:inchesToCenti" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="feetToMilesDRequest">
+
+      <wsdl:part element="impl:feetToMilesD" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="inchesToFeetDRequest">
+
+      <wsdl:part element="impl:inchesToFeetD" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="milesToKilometersRequest">
+
+      <wsdl:part element="impl:milesToKilometers" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="kilometersToMilesDRequest">
+
+      <wsdl:part element="impl:kilometersToMilesD" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="milesToFeetResponse">
+
+      <wsdl:part element="impl:milesToFeetResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="monthsToDaysResponse">
+
+      <wsdl:part element="impl:monthsToDaysResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="inchesToFeetResponse">
+
+      <wsdl:part element="impl:inchesToFeetResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="feetToMilesResponse">
+
+      <wsdl:part element="impl:feetToMilesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="yearsToWeeksDRequest">
+
+      <wsdl:part element="impl:yearsToWeeksD" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="kilometersToMilesDResponse">
+
+      <wsdl:part element="impl:kilometersToMilesDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="yearsToWeeksRequest">
+
+      <wsdl:part element="impl:yearsToWeeks" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="milesToKilometersResponse">
+
+      <wsdl:part element="impl:milesToKilometersResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="milesToFeetDRequest">
+
+      <wsdl:part element="impl:milesToFeetD" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="monthsToDaysDRequest">
+
+      <wsdl:part element="impl:monthsToDaysD" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="daysToMonthsRequest">
+
+      <wsdl:part element="impl:daysToMonths" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="daysToMonthsResponse">
+
+      <wsdl:part element="impl:daysToMonthsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="monthsToDaysRequest">
+
+      <wsdl:part element="impl:monthsToDays" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="weeksToYearsRequest">
+
+      <wsdl:part element="impl:weeksToYears" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="milesToKilometersDRequest">
+
+      <wsdl:part element="impl:milesToKilometersD" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="weeksToYearsDRequest">
+
+      <wsdl:part element="impl:weeksToYearsD" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="monthsToDaysDResponse">
+
+      <wsdl:part element="impl:monthsToDaysDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="daysToMonthsDRequest">
+
+      <wsdl:part element="impl:daysToMonthsD" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="feetToMilesRequest">
+
+      <wsdl:part element="impl:feetToMiles" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="yearsToWeeksResponse">
+
+      <wsdl:part element="impl:yearsToWeeksResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="feetToMilesDResponse">
+
+      <wsdl:part element="impl:feetToMilesDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ConversionService">
+
+      <wsdl:operation name="kilometersToMiles">
+
+         <wsdl:input message="impl:kilometersToMilesRequest" name="kilometersToMilesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:kilometersToMilesResponse" name="kilometersToMilesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="milesToKilometers">
+
+         <wsdl:input message="impl:milesToKilometersRequest" name="milesToKilometersRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:milesToKilometersResponse" name="milesToKilometersResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="kilometersToMilesD">
+
+         <wsdl:input message="impl:kilometersToMilesDRequest" name="kilometersToMilesDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:kilometersToMilesDResponse" name="kilometersToMilesDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="milesToKilometersD">
+
+         <wsdl:input message="impl:milesToKilometersDRequest" name="milesToKilometersDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:milesToKilometersDResponse" name="milesToKilometersDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="weeksToYearsD">
+
+         <wsdl:input message="impl:weeksToYearsDRequest" name="weeksToYearsDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:weeksToYearsDResponse" name="weeksToYearsDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="monthsToDaysD">
+
+         <wsdl:input message="impl:monthsToDaysDRequest" name="monthsToDaysDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:monthsToDaysDResponse" name="monthsToDaysDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="yearsToWeeksD">
+
+         <wsdl:input message="impl:yearsToWeeksDRequest" name="yearsToWeeksDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:yearsToWeeksDResponse" name="yearsToWeeksDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="feetToMilesD">
+
+         <wsdl:input message="impl:feetToMilesDRequest" name="feetToMilesDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:feetToMilesDResponse" name="feetToMilesDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="milesToFeetD">
+
+         <wsdl:input message="impl:milesToFeetDRequest" name="milesToFeetDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:milesToFeetDResponse" name="milesToFeetDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="daysToMonthsD">
+
+         <wsdl:input message="impl:daysToMonthsDRequest" name="daysToMonthsDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:daysToMonthsDResponse" name="daysToMonthsDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="feetToInchesD">
+
+         <wsdl:input message="impl:feetToInchesDRequest" name="feetToInchesDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:feetToInchesDResponse" name="feetToInchesDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="inchesToFeetD">
+
+         <wsdl:input message="impl:inchesToFeetDRequest" name="inchesToFeetDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:inchesToFeetDResponse" name="inchesToFeetDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="inchesToCentiD">
+
+         <wsdl:input message="impl:inchesToCentiDRequest" name="inchesToCentiDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:inchesToCentiDResponse" name="inchesToCentiDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="centiToInchesD">
+
+         <wsdl:input message="impl:centiToInchesDRequest" name="centiToInchesDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:centiToInchesDResponse" name="centiToInchesDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="inchesToFeet">
+
+         <wsdl:input message="impl:inchesToFeetRequest" name="inchesToFeetRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:inchesToFeetResponse" name="inchesToFeetResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="feetToInches">
+
+         <wsdl:input message="impl:feetToInchesRequest" name="feetToInchesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:feetToInchesResponse" name="feetToInchesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="inchesToCenti">
+
+         <wsdl:input message="impl:inchesToCentiRequest" name="inchesToCentiRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:inchesToCentiResponse" name="inchesToCentiResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="centiToInches">
+
+         <wsdl:input message="impl:centiToInchesRequest" name="centiToInchesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:centiToInchesResponse" name="centiToInchesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="feetToMiles">
+
+         <wsdl:input message="impl:feetToMilesRequest" name="feetToMilesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:feetToMilesResponse" name="feetToMilesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="milesToFeet">
+
+         <wsdl:input message="impl:milesToFeetRequest" name="milesToFeetRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:milesToFeetResponse" name="milesToFeetResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="daysToMonths">
+
+         <wsdl:input message="impl:daysToMonthsRequest" name="daysToMonthsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:daysToMonthsResponse" name="daysToMonthsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="monthsToDays">
+
+         <wsdl:input message="impl:monthsToDaysRequest" name="monthsToDaysRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:monthsToDaysResponse" name="monthsToDaysResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="weeksToYears">
+
+         <wsdl:input message="impl:weeksToYearsRequest" name="weeksToYearsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:weeksToYearsResponse" name="weeksToYearsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="yearsToWeeks">
+
+         <wsdl:input message="impl:yearsToWeeksRequest" name="yearsToWeeksRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:yearsToWeeksResponse" name="yearsToWeeksResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ConversionServiceSoapBinding" type="impl:ConversionService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="kilometersToMiles">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="kilometersToMilesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="kilometersToMilesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="milesToKilometers">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="milesToKilometersRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="milesToKilometersResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="kilometersToMilesD">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="kilometersToMilesDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="kilometersToMilesDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="milesToKilometersD">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="milesToKilometersDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="milesToKilometersDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="weeksToYearsD">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="weeksToYearsDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="weeksToYearsDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="monthsToDaysD">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="monthsToDaysDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="monthsToDaysDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="yearsToWeeksD">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="yearsToWeeksDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="yearsToWeeksDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="feetToMilesD">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="feetToMilesDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="feetToMilesDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="milesToFeetD">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="milesToFeetDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="milesToFeetDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="daysToMonthsD">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="daysToMonthsDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="daysToMonthsDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="feetToInchesD">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="feetToInchesDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="feetToInchesDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="inchesToFeetD">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="inchesToFeetDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="inchesToFeetDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="inchesToCentiD">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="inchesToCentiDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="inchesToCentiDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="centiToInchesD">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="centiToInchesDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="centiToInchesDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="inchesToFeet">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="inchesToFeetRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="inchesToFeetResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="feetToInches">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="feetToInchesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="feetToInchesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="inchesToCenti">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="inchesToCentiRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="inchesToCentiResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="centiToInches">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="centiToInchesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="centiToInchesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="feetToMiles">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="feetToMilesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="feetToMilesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="milesToFeet">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="milesToFeetRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="milesToFeetResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="daysToMonths">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="daysToMonthsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="daysToMonthsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="monthsToDays">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="monthsToDaysRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="monthsToDaysResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="weeksToYears">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="weeksToYearsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="weeksToYearsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="yearsToWeeks">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="yearsToWeeksRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="yearsToWeeksResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ConversionServiceService">
+
+      <wsdl:port binding="impl:ConversionServiceSoapBinding" name="ConversionService">
+
+         <wsdlsoap:address location="http://localhost:8080/Lab5_WS/services/ConversionService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
