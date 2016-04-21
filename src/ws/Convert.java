@@ -1,14 +1,17 @@
-package endpoints;
+package ws;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.jws.soap.SOAPBinding.Style;
 
 @WebService
-public interface ConversionServiceInterface {
+@SOAPBinding(style = Style.RPC)
+public interface Convert {
 	
 	@WebMethod
 	public double inchesToFeet(int x);
-	@WebMethod //Overloaded for double entry
+	@WebMethod
 	public double inchesToFeetD(double x);
 	
 	@WebMethod
